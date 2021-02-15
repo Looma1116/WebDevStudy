@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  /*
+  block level element(=tag) 화면 전체를 쓰는 태그
+  */
+  h1, h2{
+    border : 2px solid green;
+    padding : 5px skyblue;
+    margin : 9px;
+    display:inline;
+
+    /*border-width:5px;
+      border-color:red;
+      border-style:solid;*/
+    /* display:inline; 하면 inline element로 바뀜*/
+    }
+
+  /*
+  inline element 자기 크기만 쓰는 태그
+  */
+  a{
+    border-width:1%;
+    border-color:plum;
+    border-style:groove;
+    display:block;
+    width:10%;
+    margin:15pt;
+    padding: 5% 5% 5% 5%;
+    /* display:block; 하면 block element로 바뀜. display:none; 은 안보이게*/
+  }
+
+
+  </style>
+</head>
+<body>
+  <h1>Box</h1><h2>is showing the boundary of h1 tag.</h2>
+
+  <a href="https://www.w3schools.com/css/css_boxmodel.asp">
+    click</a>(about css_boxmodel)
+</body>
