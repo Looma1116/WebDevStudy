@@ -1,0 +1,25 @@
+a{
+}
+body{
+  margin:1px;
+}
+@media(min-width : 600px){
+  #grid{
+    display:grid;
+    grid-template-columns: 100px 1fr;
+  }
+  h1{
+    text-align:center;
+    border-bottom : 6px dashed;
+    margin:0;
+    padding:5px;
+  }
+  #article{
+    margin-left: 20px;
+  }
+}
+#grid ol{ /**부모가 grid인 ol만 선택자**/
+  border-right:1px solid gray;
+  margin-top:0;
+  padding:20px;
+}
