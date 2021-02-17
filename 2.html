@@ -4,14 +4,7 @@
   <title>WEB - CSS</title>
   <meta charset="utf-8">
   <style>
-    #active{
-      color:salmon;
-    }
-    .saw{
-      color:gray;
-    }
     a{
-      color:plum;
       text-decoration: none;
     }
     h1{
@@ -20,38 +13,48 @@
       margin:0;
       padding:5px;
     }
-    ol{
-      border-right:1px solid gray;
-      width:50%;
-      margin-top:0;
-      padding:20px;
-    }
     body{
       margin:1px;
+    }
+    #grid{
+      display:grid;
+      grid-template-columns: 100px 1fr;
+    }
+    #grid ol{ /**부모가 grid인 ol만 선택자**/
+      border-right:1px solid gray;
+      margin-top:0;
+      padding-left:25px;
+      padding-top:20px;
+    }
+    #article{
+      margin-left: 20px;
     }
   </style>
 </head>
 <body>
   <h1><a href="index.html"><font color="red">WEB</font></a></h1>
-  <ol>
-    <li><a href="1.html" class="saw">HTML</a></li>
-    <li><a href="2.html" class="saw" id="active">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <!--
-  <h1><a href="index.html"><font color="red">WEB</font></a></h1>
-  <ol>
+  <div id="grid">
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+    <!--
+    <h1><a href="index.html"><font color="red">WEB</font></a></h1>
+    <ol>
     <li><a href="1.html"><font color="green">HTML</font></a></li>
     <li><a href="2.html"><font color="blue">CSS</font></a></li>
-<li><a href="3.html"><font color="orange">JavaScript</font></a></li>
+    <li><a href="3.html"><font color="orange">JavaScript</font></a></li>
   </ol>
-  -->
- 
+-->
+<div id="article">
   <h2>What is CSS?(CSS이란 무엇인가?)</h2>
   <p><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" title="css specification">CSS</a> stands for Cascading Style Sheets
-CSS <strong>describes</strong> how HTML elements are to be displayed on screen, paper, or in other media
-CSS saves a lot of work. It can control the layout of multiple web pages all at once
-External stylesheets are stored in CSS files
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ONcmkf07EuI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    CSS <strong>describes</strong> how HTML elements are to be displayed on screen, paper, or in other media
+    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    External stylesheets are stored in CSS files<br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ONcmkf07EuI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
 </body>
 </html>
