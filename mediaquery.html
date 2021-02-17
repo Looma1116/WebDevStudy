@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    div{
+      border:10px solid green;
+      font-size:60px;
+    }
+    @media(min-width:800px){
+      .n800{
+        display : none;
+      }
+    }
+    @media(max-width:800px){
+      .w800{
+        display : none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class = "n800">
+    more narrow than 800px
+  </div>
+  <div class = "w800">
+    wider than 800px
+  </div>
+</body>
+</html>
