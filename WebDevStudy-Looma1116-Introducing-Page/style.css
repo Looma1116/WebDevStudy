@@ -1,0 +1,21 @@
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-top : 5px dashed gray;
+    grid-tem
+  }
+  .a{
+    padding : none;
+    font-size: 2.3vw;
+    font-weight: bold;
+    text-align: center;
+    border-bottom:5px dashed gray;
+
+  }
+  .a a{
+    color:red;
+    text-decoration: inherit;
+  }
+  .now{
+    color:black;
+  }
