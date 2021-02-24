@@ -9,17 +9,24 @@
   <h1 style="text-align : center;"><a href="index.html">WEB</a></h1>
   <input id="mode" type="button" value="night" onclick="
   var target = document.querySelector('body');
+  var link = document.querySelectorAll('a');
   if(this.value === 'night'){
     target.style.backgroundColor='gray';
     target.style.color='white';
     this.value = 'day';
     document.querySelector('#mode2').value = 'day';
+    for ( var i = 0; i < link.length; i++ ){
+      link[i].style.color = 'plum';
+    }
   }
   else{
     target.style.backgroundColor='white';
     target.style.color='black';
     this.value = 'night';
     document.querySelector('#mode2').value = 'night';
+    for ( var i = 0; i < link.length; i++ ){
+      link[i].style.color = 'purple';
+    }
   }
   ">
   <div id="grid">
@@ -32,23 +39,30 @@
     <div id="article">
       <h2>What is JavaScript?(JavaScript이란 무엇인가?)</h2>
       <p><a href="https://en.wikipedia.org/wiki/JavaScript" target="_black" title="javascript specification">JavaScript</a> often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
-      </div>
     </div>
+  </div>
 
-    <input id="mode2" type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor='gray';
-      target.style.color='white';
-      this.value = 'day';
-      document.querySelector('#mode').value = 'day';
+  <input id="mode2" type="button" value="night" onclick="
+  var target = document.querySelector('body');
+  var link = document.querySelectorAll('a');
+  if(this.value === 'night'){
+    target.style.backgroundColor='gray';
+    target.style.color='white';
+    this.value = 'day';
+    document.querySelector('#mode').value = 'day';
+    for ( var i = 0; i < link.length; i++ ){
+      link[i].style.color = 'plum';
     }
-    else{
-      target.style.backgroundColor='white';
-      target.style.color='black';
-      this.value = 'night';
-      document.querySelector('#mode').value = 'night';
+  }
+  else{
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    this.value = 'night';
+    document.querySelector('#mode').value = 'night';
+    for ( var i = 0; i < link.length; i++ ){
+      link[i].style.color = 'purple';
     }
-    ">
+  }
+  ">
   </body>
   </html>
