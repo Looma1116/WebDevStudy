@@ -4,31 +4,45 @@
   <title>WEB - JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+    var Body={
+      setBackColor:function(color){
+        document.querySelector('body').style.backgroundColor=color;
+      },
+      setColor:function(color){
+        document.querySelector('body').style.color=color;
+      }
+    }
+
+    var Link={
+      setColor:function(color){
+        var link = document.querySelectorAll('a');
+        for ( var i = 0; i < link.length; i++){
+          link[i].style.color = color;
+        }
+      }
+    }
+
+    function nightMode(self){
+      if(self.value === 'night'){
+        Body.setBackColor('#2E2E2E');
+        Body.setColor('white');
+        self.value = 'day';
+        Link.setColor('#BCA9F5');
+      }
+      else{
+        Body.setBackColor('white');
+        Body.setColor('black');
+        self.value = 'night';
+        Link.setColor('blue');
+      }
+    }
+
+  </script>
 </head>
 <body>
   <h1 style="text-align : center;"><a href="index.html">WEB</a></h1>
-  <input id="mode" type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  var link = document.querySelectorAll('a');
-  if(this.value === 'night'){
-    target.style.backgroundColor='gray';
-    target.style.color='white';
-    this.value = 'day';
-    document.querySelector('#mode2').value = 'day';
-    for ( var i = 0; i < link.length; i++ ){
-      link[i].style.color = 'plum';
-    }
-  }
-  else{
-    target.style.backgroundColor='white';
-    target.style.color='black';
-    this.value = 'night';
-    document.querySelector('#mode2').value = 'night';
-    for ( var i = 0; i < link.length; i++ ){
-      link[i].style.color = 'purple';
-    }
-  }
-  ">
+  <input type="button" value="night" onclick="nightMode(this)">
   <div id="grid">
     <ol>
       <li><a href="1.html">HTML</a></li>
@@ -42,27 +56,5 @@
     </div>
   </div>
 
-  <input id="mode2" type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  var link = document.querySelectorAll('a');
-  if(this.value === 'night'){
-    target.style.backgroundColor='gray';
-    target.style.color='white';
-    this.value = 'day';
-    document.querySelector('#mode').value = 'day';
-    for ( var i = 0; i < link.length; i++ ){
-      link[i].style.color = 'plum';
-    }
-  }
-  else{
-    target.style.backgroundColor='white';
-    target.style.color='black';
-    this.value = 'night';
-    document.querySelector('#mode').value = 'night';
-    for ( var i = 0; i < link.length; i++ ){
-      link[i].style.color = 'purple';
-    }
-  }
-  ">
   </body>
   </html>
