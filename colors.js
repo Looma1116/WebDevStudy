@@ -1,18 +1,21 @@
   var Body={
     setBackColor:function(color){
-      document.querySelector('body').style.backgroundColor=color;
+      //document.querySelector('body').style.backgroundColor=color;
+      $('body').css("backgroundColor",color);
     },
     setColor:function(color){
-      document.querySelector('body').style.color=color;
+      //document.querySelector('body').style.color=color;
+      $('body').css("color",color);
     }
   };
 
   var Link={
     setColor:function(color){
-      var link = document.querySelectorAll('a');
-      for ( var i = 0; i < link.length; i++){
-        link[i].style.color = color;
-      }
+    //   var link = document.querySelectorAll('a');
+    //   for ( var i = 0; i < link.length; i++){
+    //     link[i].style.color = color;
+    //   }
+    $('a').css("color", color);  //jQuery
     }
   };
 
