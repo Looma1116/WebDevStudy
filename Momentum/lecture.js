@@ -21,3 +21,9 @@ const title = document.querySelector("#tomato");
 
 //다 가져오고 싶으면?
 const title = document.querySelectorAll(".div");
+
+// element event
+function handleTitleClick() {
+    console.log("title was clicked!");
+}
+title.addEventListener("click", handleTitleClick);
