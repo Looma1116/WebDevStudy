@@ -69,3 +69,35 @@ window.addEventListener("resize", handleWindowResize);
 window.addEventListener("copy", handleWindowCopy);
 window.addEventListener("offline", handleWindowOffline);
 window.addEventListener("online", handleWindowOnline);
+
+//CSS control
+function handleText1Click() {
+    const clickedClass = "active";
+    if (text1.classList.contains(clickedClass)) {
+        text1.classList.remove(clickedClass);
+    }
+    else {
+        text1.classList.add(clickedClass);
+    }
+}
+
+text1.addEventListener("click", handleText1Click);
+//in CSS
+// h1 {
+//     color : cornflowerblue;
+//     transition: color 0.9s ease-in-out;
+// }
+
+// .active {
+//     color:tomato;
+// }
+
+// .sexy-font{
+//     font-family: fantasy ;
+// }
+
+//위의 코드를 한 방에 toggle()로 구현
+function handleText1Click() {
+    text1.classList.toggle("active");
+}
+text1.addEventListener("click", handleText1Click);
